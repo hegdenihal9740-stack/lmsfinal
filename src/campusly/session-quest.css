@@ -94,7 +94,7 @@
 .is-next .sq-node-num{color:var(--sq-deep);font-size:19px}
 .sq-ring{position:absolute;inset:-6px;border-radius:24px;transform:rotate(45deg);border:2px solid var(--sq-pink);animation:sq-radar 2.4s ease-out infinite}
 .sq-ring-2{animation-delay:1.2s;border-color:var(--sq-amber)}
-.sq-stop-button:hover .sq-node-core{transform:rotate(45deg) scale(1.08)}
+.sq-stop-button:hover .sq-node-core{transform:rotate(45deg)}
 .sq-here{position:absolute;z-index:5;transform:translate(-50%,-64px);display:inline-flex;align-items:center;gap:4px;white-space:nowrap;padding:5px 10px;border-radius:999px;background:var(--sq-ink);color:var(--sq-deep);font-size:10.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;box-shadow:0 8px 20px -6px var(--sq-pink);animation:sq-float 2.2s ease-in-out infinite}
 .sq-here::after{content:"";position:absolute;left:50%;bottom:-5px;width:10px;height:10px;background:var(--sq-ink);transform:translateX(-50%) rotate(45deg);border-radius:2px;z-index:-1}
 .sq-here svg{color:var(--sq-pink)}
@@ -104,7 +104,6 @@
 .is-right .sq-card{--sq-from:-24px;text-align:right;align-items:flex-end}
 .sq-stop.is-in .sq-card{transform:translateY(-50%) translateX(0);opacity:1}
 .sq-stop-button:hover .sq-card{background:oklch(0.32 0.044 258 / 0.75);border-color:oklch(1 0 0 / 0.26)}
-.sq-stop.is-in .sq-stop-button:hover .sq-card{transform:translateY(calc(-50% - 3px))}
 .sq-card-kicker{display:inline-flex;align-items:center;gap:6px;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--sq-muted)}
 .sq-card-dot{width:7px;height:7px;border-radius:50%;background:var(--sq-muted)}
 .is-done .sq-card-kicker{color:var(--sq-mint)}

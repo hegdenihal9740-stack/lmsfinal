@@ -3,6 +3,13 @@ apply plugin: 'com.android.application'
 android {
     namespace = "com.skillai.studentportal"
     compileSdk = rootProject.ext.compileSdkVersion
+    applicationVariants.all { variant ->
+        if (variant.buildType.name == "debug") {
+            variant.outputs.all {
+                outputFileName = "SkillAI-Student-Portal.apk"
+            }
+        }
+    }
     defaultConfig {
         applicationId "com.skillai.studentportal"
         minSdkVersion rootProject.ext.minSdkVersion

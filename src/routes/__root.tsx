@@ -81,12 +81,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Skill AI | Student Portal" },
       { name: "description", content: "Skill AI student learning portal." },
-      { name: "author", content: "Lovable" },
       { property: "og:title", content: "Skill AI | Student Portal" },
       { property: "og:description", content: "Skill AI student learning portal." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {

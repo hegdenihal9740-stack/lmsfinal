@@ -188,46 +188,34 @@ body:has(.roadmap-page:not(.module-session-page)){
 }
 
 /* ---------- Map board ---------- */
-/* Sky that brightens toward the finish: golden dawn near Module 10, violet mid-way, fresh mint at the start. */
 .roadmap-page .roadmap-module-map{
-  border:1px solid oklch(1 0 0 / 0.8);
+  --rm-space-deep:color-mix(in oklch,var(--sa-ink) 88%,#171c3d);
+  --rm-space-mid:color-mix(in oklch,var(--sa-ink) 78%,var(--sa-teal));
+  border:1px solid color-mix(in oklch,var(--sa-teal) 30%,var(--sa-ink));
   background:
-    radial-gradient(ellipse 70% 14% at 50% 0%,oklch(0.9 0.14 80 / 0.85),transparent 75%),
-    radial-gradient(ellipse 45% 18% at 6% 22%,oklch(0.8 0.150 42 / 0.45),transparent 72%),
-    radial-gradient(ellipse 45% 18% at 96% 40%,oklch(0.78 0.077 258 / 0.5),transparent 72%),
-    radial-gradient(ellipse 45% 18% at 4% 62%,oklch(0.8 0.102 252 / 0.5),transparent 72%),
-    radial-gradient(ellipse 50% 18% at 94% 84%,oklch(0.84 0.13 170 / 0.55),transparent 72%),
-    linear-gradient(180deg,
-      oklch(0.95 0.07 85) 0%,
-      oklch(0.92 0.07 20) 18%,
-      oklch(0.89 0.044 258) 40%,
-      oklch(0.89 0.060 252) 62%,
-      oklch(0.91 0.056 195) 82%,
-      oklch(0.93 0.08 170) 100%);
-  box-shadow:0 34px 70px -40px oklch(0.35 0.077 258 / 0.6),inset 0 1px oklch(1 0 0 / 0.95),inset 0 0 0 1px oklch(1 0 0 / 0.35);
+    radial-gradient(circle at 11% 6%,color-mix(in oklch,var(--sa-white) 92%,transparent) 0 1px,color-mix(in oklch,var(--sa-teal) 55%,transparent) 1.5px,transparent 9px),
+    radial-gradient(circle at 86% 9%,color-mix(in oklch,var(--sa-white) 88%,transparent) 0 1px,color-mix(in oklch,var(--sa-gold) 55%,transparent) 1.5px,transparent 10px),
+    radial-gradient(circle at 72% 21%,color-mix(in oklch,var(--sa-white) 82%,transparent) 0 1px,color-mix(in oklch,var(--sa-teal) 48%,transparent) 1.5px,transparent 8px),
+    radial-gradient(circle at 18% 34%,color-mix(in oklch,var(--sa-white) 86%,transparent) 0 1px,color-mix(in oklch,var(--sa-ember) 45%,transparent) 1.5px,transparent 9px),
+    radial-gradient(circle at 88% 49%,color-mix(in oklch,var(--sa-white) 90%,transparent) 0 1px,color-mix(in oklch,var(--sa-teal) 52%,transparent) 1.5px,transparent 9px),
+    radial-gradient(circle at 12% 64%,color-mix(in oklch,var(--sa-white) 84%,transparent) 0 1px,color-mix(in oklch,var(--sa-gold) 48%,transparent) 1.5px,transparent 9px),
+    radial-gradient(circle at 82% 78%,color-mix(in oklch,var(--sa-white) 92%,transparent) 0 1px,color-mix(in oklch,var(--sa-teal) 52%,transparent) 1.5px,transparent 9px),
+    radial-gradient(circle at 22% 93%,color-mix(in oklch,var(--sa-white) 88%,transparent) 0 1px,color-mix(in oklch,var(--sa-ember) 44%,transparent) 1.5px,transparent 9px),
+    radial-gradient(ellipse 58% 15% at 50% 8%,color-mix(in oklch,var(--sa-gold) 19%,transparent),transparent 74%),
+    radial-gradient(ellipse 48% 13% at 8% 24%,color-mix(in oklch,var(--sa-teal) 42%,transparent),transparent 72%),
+    radial-gradient(ellipse 48% 16% at 94% 46%,color-mix(in oklch,var(--sa-ember) 30%,transparent),transparent 72%),
+    radial-gradient(ellipse 55% 14% at 8% 73%,color-mix(in oklch,var(--sa-teal) 38%,transparent),transparent 72%),
+    radial-gradient(ellipse 54% 17% at 93% 91%,color-mix(in oklch,var(--sa-gold) 25%,transparent),transparent 72%),
+    repeating-radial-gradient(ellipse at 50% 42%,transparent 0 118px,color-mix(in oklch,var(--sa-white) 5%,transparent) 119px 120px,transparent 121px 206px),
+    linear-gradient(color-mix(in oklch,var(--sa-white) 3%,transparent) 1px,transparent 1px),
+    linear-gradient(90deg,color-mix(in oklch,var(--sa-white) 3%,transparent) 1px,transparent 1px),
+    linear-gradient(165deg,var(--rm-space-deep) 0%,var(--rm-space-mid) 48%,var(--rm-space-deep) 100%);
+  background-size:
+    100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,
+    100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,100% 100%,56px 56px,56px 56px,100% 100%;
+  background-position:0 0;
+  box-shadow:0 34px 70px -40px color-mix(in oklch,var(--sa-ink) 70%,transparent),inset 0 1px color-mix(in oklch,var(--sa-white) 24%,transparent),inset 0 0 0 1px color-mix(in oklch,var(--sa-white) 8%,transparent);
 }
-/* Fine dotted texture + soft diagonal light beams */
-.roadmap-page .roadmap-module-map::before{
-  background-image:
-    radial-gradient(circle,oklch(1 0 0 / 0.9) 1px,transparent 1.8px),
-    radial-gradient(circle,oklch(0.7 0.077 258 / 0.35) 1px,transparent 1.8px),
-    repeating-linear-gradient(125deg,transparent 0 120px,oklch(1 0 0 / 0.22) 121px 160px,transparent 161px 300px);
-  background-position:0 0,31px 47px,0 0;
-  background-size:62px 62px,94px 94px,100% 100%;
-  opacity:.75;
-}
-/* Slowly drifting colour glows behind the road */
-.roadmap-page .roadmap-module-map::after{
-  inset:0;height:auto;
-  background:
-    radial-gradient(circle at 20% 30%,oklch(0.85 0.15 65 / 0.35),transparent 18%),
-    radial-gradient(circle at 80% 55%,oklch(0.75 0.094 258 / 0.25),transparent 20%),
-    radial-gradient(circle at 25% 85%,oklch(0.8 0.112 195 / 0.3),transparent 20%);
-  background-size:100% 100%;
-  opacity:1;
-  animation:rm-drift 18s ease-in-out infinite alternate;
-}
-@keyframes rm-drift{0%{transform:translate3d(0,0,0)}50%{transform:translate3d(3%,-2%,0)}100%{transform:translate3d(-3%,2%,0)}}
 /* Brighter sparkles */
 .roadmap-page .roadmap-sparkles span{background:oklch(1 0 0);box-shadow:0 0 10px 2px oklch(0.9 0.12 80 / 0.9)}
 
@@ -374,7 +362,7 @@ body:has(.roadmap-page:not(.module-session-page)){
 /* ---------- Compact module cards: AI icon + module name ---------- */
 .app-shell .roadmap-page .roadmap-module-card-compact,
 .roadmap-page .roadmap-module-card-compact{
-  display:flex;align-items:center;gap:10px;width:100%;max-width:250px;padding:9px 14px 9px 9px;
+  display:flex;align-items:center;gap:10px;width:100%;max-width:250px;min-height:52px;padding:9px 14px 9px 9px;
   border:1px solid var(--rm-card-border);border-radius:16px;background:var(--rm-card);background-image:none;
   color:var(--rm-ink);font:inherit;text-align:left;cursor:pointer;overflow:hidden;
   animation:rm-card-float 4.5s ease-in-out calc(var(--module-reveal-delay,0ms) * -3) infinite;

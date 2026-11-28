@@ -288,11 +288,7 @@ export function Login({ onLogin, previewMode }) {
     </div>
     <div className="login-main">
       <form className="login-form login-animate" onSubmit={submit}>
-        <div className="login-heading"><span className="eyebrow">STUDENT PORTAL</span><h2>{forgot ? 'Forgot password' : 'Welcome back'}</h2><p>{forgot ? 'Receive a secure password reset link by email.' : 'Enter your details to access your learning dashboard.'}</p>{previewMode && (
-              <p className="login-terms" role="status">
-                Preview mode: sample data and changes stay on this device.
-              </p>
-            )}</div>
+        <div className="login-heading"><span className="eyebrow">STUDENT PORTAL</span><h2>{forgot ? 'Forgot password' : 'Welcome back'}</h2>{forgot && <p>Receive a secure password reset link by email.</p>}</div>
         {error && (
             <div className="form-error" role="alert">{error}</div>
           )}
@@ -1115,7 +1111,7 @@ function Courses({ data, setPage }) {
         }
         return best
       }
-      // Scroll position at which a platform sits just below the middle of the screen.
+      // Scroll so each module platform sits just below the middle of the screen.
       const scrollFor = (target) => {
         const rect = target.getBoundingClientRect()
         return Math.max(0, rect.top + window.scrollY + rect.height / 2 - window.innerHeight * 0.55)
@@ -1202,14 +1198,12 @@ function Courses({ data, setPage }) {
         metrics.constructionHead.setAttribute('cy', String(head.y))
         metrics.constructionHead.style.opacity = progress > 0.015 ? '1' : '0'
       }
-      const point = path.getPointAtLength(distance)
       const ahead = path.getPointAtLength(Math.min(pathLength, distance + 2))
       const behind = path.getPointAtLength(Math.max(0, distance - 2))
       const scalePoint = (value) => ({
         x: (value.x / 1000) * trackWidth,
         y: (value.y / viewBoxHeight) * trackHeight,
       })
-      const position = scalePoint(point)
       const forward = scalePoint(behind)
       const backward = scalePoint(ahead)
       const directionX = backward.x - forward.x
@@ -1218,12 +1212,15 @@ function Courses({ data, setPage }) {
       const normalX = -directionY / directionLength
       const normalY = directionX / directionLength
       const laneWidth = 66 * Math.hypot((trackWidth / 1000) * normalX, (trackHeight / viewBoxHeight) * normalY)
-      const runnerWidth = Math.max(108, Math.min(168, laneWidth * 2.5))
+      const runnerWidth = Math.max(155, Math.min(225, laneWidth * 3.7))
       if (Math.abs(runnerWidth - Number.parseFloat(runner.style.width || '0')) >= 2) {
         runner.style.width = `${runnerWidth}px`
       }
+      const point = path.getPointAtLength(distance)
+      const position = scalePoint(point)
+      const runnerY = Math.max(position.y, runnerWidth * 1.5 + 8)
       runner.style.setProperty('--roadmap-runner-x', `${runnerOffsetX + position.x}px`)
-      runner.style.setProperty('--roadmap-runner-y', `${runnerOffsetY + position.y}px`)
+      runner.style.setProperty('--roadmap-runner-y', `${runnerOffsetY + runnerY}px`)
       runner.style.setProperty('--student-lean', `${Math.max(-7, Math.min(7, directionX / directionLength * direction * 7))}deg`)
       runner.style.opacity = '1'
       // Progress grows while scrolling up, so the "forward" direction for the motion check is the opposite of scroll direction.

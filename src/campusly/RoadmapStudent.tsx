@@ -1,5 +1,5 @@
-import studentPhoto from '@/assets/college-student-front.webp'
-import studentBack from '@/assets/college-student-rear.webp'
+import studentPhoto from '@/assets/college-student-front-amber.webp'
+import studentBack from '@/assets/college-student-rear-amber.webp'
 
 // Photo layers preserve the supplied character while adding a scroll-driven gait.
 export default function RoadmapStudent({ running, direction = 1 }) {

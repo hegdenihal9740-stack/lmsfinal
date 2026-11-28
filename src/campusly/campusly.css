@@ -2754,7 +2754,7 @@ body:has(.roadmap-page:not(.module-session-page)){
   will-change:transform,opacity;
 }
 .roadmap-runner canvas{display:block;width:100%!important;height:100%!important}
-.roadmap-runner:has(.roadmap-photo-student){aspect-ratio:2/3;transform:translate3d(var(--roadmap-runner-x,0px),var(--roadmap-runner-y,0px),0) translate(-50%,-96%)}
+.roadmap-runner:has(.roadmap-photo-student){aspect-ratio:2/3;transform:translate3d(var(--roadmap-runner-x,0px),var(--roadmap-runner-y,0px),0) translate(-50%,-100%)}
 .roadmap-photo-student,.roadmap-photo-body,.roadmap-photo-turn,.roadmap-photo-view{position:absolute;inset:0}
 .roadmap-photo-student{perspective:600px}
 .roadmap-photo-turn{transform-style:preserve-3d;transform:rotateY(0deg) rotateZ(var(--student-lean,0deg));transition:transform .45s ease;transform-origin:50% 96%}
@@ -2767,15 +2767,15 @@ body:has(.roadmap-page:not(.module-session-page)){
 .roadmap-photo-upper{clip-path:polygon(0 0,100% 0,100% 56%,0 56%)}
 .roadmap-photo-leg-left{clip-path:polygon(0 55%,49% 55%,49% 100%,0 100%);transform-origin:43% 56%}
 .roadmap-photo-leg-right{clip-path:polygon(49% 55%,100% 55%,100% 100%,49% 100%);transform-origin:57% 56%}
-.roadmap-photo-body,.roadmap-photo-leg,.roadmap-student-shadow{animation-duration:.65s;animation-iteration-count:infinite;animation-timing-function:ease-in-out;animation-play-state:paused}
+.roadmap-photo-body,.roadmap-photo-leg,.roadmap-student-shadow{animation-duration:.84s;animation-iteration-count:infinite;animation-timing-function:ease-in-out;animation-play-state:paused}
 .roadmap-photo-body{animation-name:roadmap-photo-step}
 .roadmap-photo-leg-left{animation-name:roadmap-photo-stride-left}
 .roadmap-photo-leg-right{animation-name:roadmap-photo-stride-right}
 .roadmap-student-shadow{animation-name:roadmap-shadow-step}
 .is-walking .roadmap-photo-body,.is-walking .roadmap-photo-leg,.is-walking .roadmap-student-shadow{animation-play-state:running}
-@keyframes roadmap-photo-step{0%,100%{transform:translateY(0) rotate(-1deg)}25%{transform:translateY(-3px) rotate(.8deg)}50%{transform:translateY(0) rotate(1deg)}75%{transform:translateY(-3px) rotate(-.8deg)}}
-@keyframes roadmap-photo-stride-left{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-2px) rotate(5deg)}}
-@keyframes roadmap-photo-stride-right{0%,100%{transform:translateY(-2px) rotate(5deg)}50%{transform:translateY(0) rotate(-5deg)}}
+@keyframes roadmap-photo-step{0%,100%{transform:translateY(0) rotate(-.8deg)}25%{transform:translateY(-2px) rotate(.5deg)}50%{transform:translateY(0) rotate(.8deg)}75%{transform:translateY(-2px) rotate(-.5deg)}}
+@keyframes roadmap-photo-stride-left{0%,100%{transform:translateY(0) rotate(-8deg)}25%{transform:translateY(-1px) rotate(0)}50%{transform:translateY(0) rotate(8deg)}75%{transform:translateY(-1px) rotate(0)}}
+@keyframes roadmap-photo-stride-right{0%,100%{transform:translateY(0) rotate(8deg)}25%{transform:translateY(-1px) rotate(0)}50%{transform:translateY(0) rotate(-8deg)}75%{transform:translateY(-1px) rotate(0)}}
 @keyframes roadmap-shadow-step{0%,100%{transform:scaleX(1);opacity:.2}50%{transform:scaleX(.82);opacity:.14}}
 @media(prefers-reduced-motion:reduce){.roadmap-photo-body,.roadmap-photo-leg,.roadmap-student-shadow{animation:none}.roadmap-photo-turn{transition:none}}
 .portal-logo{display:block;width:130px;height:36px;object-fit:contain;flex-shrink:0}

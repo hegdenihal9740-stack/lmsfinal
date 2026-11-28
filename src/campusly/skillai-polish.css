@@ -4275,3 +4275,282 @@ body .main-area.pastel-theme:not([data-tab="marks"]):not([data-tab="timetable"])
   }
 }
 
+.roadmap-page .roadmap-runner {
+  z-index: 6;
+}
+
+.app-shell .marks-page .marks-hero {
+  border-color: color-mix(in oklab, var(--sa-ember) 16%, var(--sa-line));
+  background:
+    radial-gradient(ellipse at 88% 24%, color-mix(in oklab, var(--sa-ember) 15%, transparent), transparent 30%),
+    radial-gradient(ellipse at 90% 100%, color-mix(in oklab, var(--sa-gold) 11%, transparent), transparent 42%),
+    linear-gradient(118deg, var(--sa-white), var(--sa-paper) 52%, color-mix(in oklab, var(--sa-ember) 7%, var(--sa-paper)));
+  box-shadow:
+    var(--sa-shadow-lg),
+    inset 0 1px var(--sa-white);
+}
+.app-shell .marks-page .marks-hero::before {
+  background: color-mix(in oklab, var(--sa-ember) 14%, transparent);
+}
+.app-shell .marks-page .marks-hero::after {
+  background: color-mix(in oklab, var(--sa-gold) 10%, transparent);
+}
+.app-shell .marks-page .marks-hero-copy {
+  max-width: 58%;
+}
+.app-shell .marks-page .marks-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border: 1px solid color-mix(in oklab, var(--sa-ember) 18%, var(--sa-white));
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--sa-ember) 9%, var(--sa-white));
+  color: var(--sa-ember-accessible);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .12em;
+}
+.app-shell .marks-page .marks-hero h1 {
+  margin: 13px 0 10px;
+  color: var(--sa-ink);
+  font-size: clamp(30px, 4.5vw, 46px);
+  letter-spacing: -.045em !important;
+}
+.app-shell .marks-page .marks-hero h1 span {
+  background: var(--sa-grad-ember);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.app-shell .marks-page .marks-hero-copy > p {
+  max-width: 310px;
+  color: var(--sa-ink-muted-strong);
+  font-size: 13px;
+  font-weight: 550;
+  line-height: 1.55;
+}
+.app-shell .marks-page .marks-art-paper {
+  border-color: var(--sa-line);
+  background: linear-gradient(150deg, var(--sa-white), var(--sa-paper));
+  box-shadow:
+    var(--sa-shadow-sm),
+    inset 0 0 0 1px color-mix(in oklab, var(--sa-ember) 12%, transparent);
+}
+.app-shell .marks-page .marks-art-paper > i {
+  background: linear-gradient(90deg, color-mix(in oklab, var(--sa-ink) 16%, var(--sa-white)), var(--sa-line));
+}
+.app-shell .marks-page .marks-art-grade {
+  border-color: var(--sa-ember);
+  background: linear-gradient(145deg, var(--sa-white), color-mix(in oklab, var(--sa-ember) 12%, var(--sa-white)));
+  box-shadow: var(--sa-shadow-ember);
+  color: var(--sa-ember-accessible);
+}
+.app-shell .marks-page .marks-art-paper > b {
+  background: var(--sa-grad-ember);
+  box-shadow: var(--sa-shadow-ember);
+}
+.app-shell .marks-page .marks-art-cap {
+  background: radial-gradient(ellipse, color-mix(in oklab, var(--sa-ember) 18%, transparent), transparent 70%);
+  color: var(--sa-ink);
+  filter: drop-shadow(0 8px 8px color-mix(in oklab, var(--sa-ink) 18%, transparent));
+}
+.app-shell .marks-page .marks-art-books {
+  background: linear-gradient(145deg, var(--sa-night-2), var(--sa-night) 64%, var(--sa-ember) 65%, var(--sa-ember-strong));
+  box-shadow:
+    0 12px 18px -8px color-mix(in oklab, var(--sa-ink) 32%, transparent),
+    inset 0 2px color-mix(in oklab, var(--sa-white) 45%, transparent);
+}
+.app-shell .marks-page .marks-art-rays i {
+  background: var(--sa-gold);
+}
+.app-shell .marks-page .marks-art-spark {
+  color: var(--sa-ember);
+  filter: drop-shadow(0 3px 5px color-mix(in oklab, var(--sa-ember) 35%, transparent));
+}
+
+@media (max-width: 760px) {
+  .app-shell .marks-page .marks-hero {
+    padding: 20px 17px;
+  }
+  .app-shell .marks-page .marks-hero-copy {
+    max-width: 63%;
+  }
+  .app-shell .marks-page .marks-hero-eyebrow {
+    padding: 5px 8px;
+    font-size: 8px;
+  }
+  .app-shell .marks-page .marks-hero h1 {
+    margin: 11px 0 8px;
+    font-size: clamp(23px, 6.4vw, 31px);
+  }
+  .app-shell .marks-page .marks-hero-copy > p {
+    font-size: 10.5px;
+  }
+  .app-shell .marks-page .marks-hero-art {
+    width: 43%;
+  }
+}
+
+.login-page .login-cta-dock .login-submit,
+.login-page .login-cta-dock .login-submit:hover,
+.login-page .login-cta-dock .login-submit:focus,
+.login-page .login-cta-dock .login-submit:active,
+.login-page .login-cta-dock.is-unlocked .login-submit,
+.login-page .login-cta-dock.is-unlocked .login-submit:hover,
+.login-page .login-cta-dock.is-unlocked .login-submit:focus,
+.login-page .login-cta-dock.is-unlocked .login-submit:active {
+  background: var(--sa-ember) !important;
+  color: var(--sa-ink) !important;
+  border-color: transparent !important;
+  filter: none !important;
+}
+
+.app-shell .main-area.pastel-theme[data-tab="classtests"] .page-stack > .section-heading {
+  position: relative;
+  isolation: isolate;
+  min-height: 170px !important;
+  overflow: hidden !important;
+  border: 1px solid color-mix(in oklab, var(--sa-success) 22%, var(--sa-line)) !important;
+  border-radius: 24px !important;
+  padding: 20px 24px !important;
+  background:
+    radial-gradient(ellipse at 86% 16%, color-mix(in oklab, var(--sa-success) 9%, transparent), transparent 48%),
+    radial-gradient(ellipse at 4% 100%, color-mix(in oklab, var(--sa-gold) 11%, transparent), transparent 52%),
+    linear-gradient(128deg, var(--sa-white), var(--sa-paper) 72%, color-mix(in oklab, var(--sa-success) 4%, var(--sa-white))) !important;
+  box-shadow:
+    0 14px 32px -25px color-mix(in oklab, var(--sa-ink) 20%, transparent),
+    inset 0 1px var(--sa-white) !important;
+  transition: box-shadow 220ms ease, border-color 220ms ease;
+}
+.app-shell .main-area.pastel-theme[data-tab="classtests"] .page-stack > .section-heading > div:first-child {
+  position: relative;
+  z-index: 1;
+  max-width: 72%;
+}
+.app-shell .main-area.pastel-theme[data-tab="classtests"] .page-stack > .section-heading .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 10px;
+  border: 1px solid color-mix(in oklab, var(--sa-success) 30%, var(--sa-line));
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--sa-success) 8%, var(--sa-white));
+  color: color-mix(in oklab, var(--sa-success) 72%, var(--sa-ink));
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .14em;
+}
+.app-shell .main-area.pastel-theme[data-tab="classtests"] .page-stack > .section-heading .eyebrow::before {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sa-ember);
+  box-shadow: 0 0 10px color-mix(in oklab, var(--sa-ember) 72%, transparent);
+  content: "";
+}
+.app-shell .main-area.pastel-theme[data-tab="classtests"] .page-stack > .section-heading h2 {
+  margin: 11px 0 6px;
+  color: var(--sa-ink) !important;
+  font-family: var(--sa-font-display);
+  font-size: clamp(26px, 4vw, 34px);
+  font-weight: 800;
+  letter-spacing: -.04em;
+  line-height: 1.12;
+}
+.app-shell .main-area.pastel-theme[data-tab="classtests"] .page-stack > .section-heading p {
+  max-width: 460px;
+  color: var(--sa-ink-muted-strong) !important;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+.app-shell .main-area.pastel-theme[data-tab="classtests"] .page-stack > .section-heading::before {
+  position: absolute;
+  z-index: 0;
+  inset: 18px auto 18px 0;
+  display: block !important;
+  width: 4px;
+  border-radius: 0 4px 4px 0;
+  background: linear-gradient(var(--sa-gold), var(--sa-ember));
+  content: "";
+}
+.app-shell .main-area.pastel-theme[data-tab="classtests"] .page-stack > .section-heading::after {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: 28px;
+  display: grid !important;
+  width: 104px;
+  height: 126px;
+  place-items: end;
+  padding: 0 17px 15px 0;
+  transform: translateY(-50%) rotate(5deg);
+  border: 1px solid color-mix(in oklab, var(--sa-gold) 34%, var(--sa-line));
+  border-radius: 15px;
+  background:
+    radial-gradient(circle at 74% 76%, color-mix(in oklab, var(--sa-ember) 19%, var(--sa-white)) 0 14px, transparent 14.5px),
+    radial-gradient(circle at 74% 76%, var(--sa-ember) 0 3px, transparent 3.8px),
+    linear-gradient(var(--sa-ember) 0 0) 16px 28px / 48px 4px no-repeat,
+    linear-gradient(color-mix(in oklab, var(--sa-ink) 24%, transparent) 0 0) 16px 43px / 66px 2px no-repeat,
+    linear-gradient(color-mix(in oklab, var(--sa-ink) 18%, transparent) 0 0) 16px 54px / 56px 2px no-repeat,
+    linear-gradient(color-mix(in oklab, var(--sa-ink) 14%, transparent) 0 0) 16px 65px / 43px 2px no-repeat,
+    linear-gradient(145deg, var(--sa-white), var(--sa-paper));
+  box-shadow:
+    0 18px 30px -18px color-mix(in oklab, var(--sa-night) 60%, transparent),
+    inset 0 1px var(--sa-white);
+  color: var(--sa-ember-accessible);
+  content: "A+";
+  font-family: var(--sa-font-display);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+@media (max-width: 600px) {
+  .app-shell .main-area.pastel-theme[data-tab="classtests"] .page-stack > .section-heading {
+    min-height: 176px !important;
+    padding: 18px 19px !important;
+  }
+  .app-shell .main-area.pastel-theme[data-tab="classtests"] .page-stack > .section-heading > div:first-child {
+    max-width: 72%;
+  }
+  .app-shell .main-area.pastel-theme[data-tab="classtests"] .page-stack > .section-heading h2 {
+    margin-top: 9px;
+    font-size: clamp(24px, 6vw, 29px);
+  }
+  .app-shell .main-area.pastel-theme[data-tab="classtests"] .page-stack > .section-heading p {
+    font-size: 11px;
+  }
+  .app-shell .main-area.pastel-theme[data-tab="classtests"] .page-stack > .section-heading::after {
+    right: 17px;
+    width: 82px;
+    height: 102px;
+    padding: 0 12px 12px 0;
+    background-size:
+      auto,
+      auto,
+      42px 4px,
+      52px 2px,
+      44px 2px,
+      34px 2px,
+      auto;
+    background-position:
+      center,
+      center,
+      13px 22px,
+      13px 35px,
+      13px 44px,
+      13px 53px,
+      center;
+  }
+}
+
+@media (max-width: 380px) {
+  .app-shell .main-area.pastel-theme[data-tab="classtests"] .page-stack > .section-heading > div:first-child {
+    max-width: 70%;
+  }
+  .app-shell .main-area.pastel-theme[data-tab="classtests"] .page-stack > .section-heading::after {
+    right: 12px;
+    width: 70px;
+    height: 92px;
+    padding-right: 10px;
+  }
+}
